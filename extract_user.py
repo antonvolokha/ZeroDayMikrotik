@@ -43,10 +43,11 @@ def get_pair(data):
 
 def dump(data):
     user_pass = get_pair(data)
+    output = ""
     for u, p in user_pass:
-        print("User:", u)
-        print("Pass:", p)
-        print()
+        output += "User: " + u + "\n"
+        output += "Pass: " + p + "\n"
+    return output
 
 if __name__ == "__main__":
     if len(sys.argv) == 2:
